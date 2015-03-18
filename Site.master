@@ -1,0 +1,111 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Site.master.cs" Inherits="SiteMaster" %>
+
+<!DOCTYPE html>
+<html lang="it">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="Description" content="Come un fior di loto, Agenzia teatrale Caravaggio Lombardia, Produzione promozione organizzazione spettacoli eventi teatrali Caravaggio Lombardia, Musica poesia lettura testi dal vivo, Corsi laboratori didattici teatro"/>
+<meta name="Keywords" content="Come un fior di loto, Agenzia teatrale Caravaggio Lombardia, Produzione promozione organizzazione spettacoli eventi teatrali Caravaggio Lombardia, Musica poesia lettura testi dal vivo, Corsi laboratori didattici teatro"/>
+<META NAME="ROBOTS" CONTENT="INDEX,FOLLOW"/>
+    <meta charset="utf-8" />
+    <title><%: Page.Title %> - Come un fior di loto</title>
+    <link href="~/Content/Site.css" rel="stylesheet" />
+    <link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <asp:PlaceHolder ID="PlaceHolder1" runat="server">           
+        <script src="<%: ResolveUrl("~/Scripts/modernizr-2.6.2.js") %>"></script>
+    </asp:PlaceHolder>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width" />
+    <asp:ContentPlaceHolder runat="server" ID="HeadContent" />
+    <style type="text/css">
+    </style>
+</head>
+<body>
+    <form runat="server">
+    <asp:ScriptManager ID="ScriptManager1" runat="server">
+        <Scripts>
+            <asp:ScriptReference Name="jquery" />
+            <asp:ScriptReference Path="~/colorbox-master/jquery.colorbox.js" />                     
+        </Scripts>
+</asp:ScriptManager>
+    <header>
+            <div class="float-left" >
+                     <a runat="server" href="Default.aspx">
+
+                 <img style="float:left; height: 130px; padding-left: 20px;" alt="" src="Images/scritta.png" />
+                    </a>
+            </div>
+        <div class="float-left" >
+         </div>
+           <div class="float-right">
+<%--                <section id="login">
+                    <asp:LoginView runat="server" ViewStateMode="Disabled">
+                        <AnonymousTemplate>
+                            <ul>
+                                <li><a id="registerLink" runat="server" href="~/Account/Register">Esegui registrazione</a></li>
+                                <li><a id="loginLink" runat="server" href="~/Account/Login">Accedi</a></li>
+                            </ul>
+                        </AnonymousTemplate>
+                        <LoggedInTemplate>
+                            <p>
+                                Hello, <a runat="server" class="username" href="~/Account/Manage" title="Manage your account">
+                                    <asp:LoginName runat="server" CssClass="username" />
+                                </a>!
+                                <asp:LoginStatus runat="server" LogoutAction="Redirect" LogoutText="Disconnetti" LogoutPageUrl="~/" />
+                            </p>
+                        </LoggedInTemplate>
+                    </asp:LoginView>
+                </section>--%>
+                <nav>
+                    <ul id="menu">
+                        <li><a runat="server" href="~/Default.aspx">Home</a></li>
+                        <li><a runat="server" href="~/Produzione.aspx">Spettacoli</a></li>
+                        <li><a id="A3" runat="server" href="~/Cartellone.aspx">Cartellone</a></li>
+                        <li><a id="A1" runat="server" href="~/Scuola.aspx">Didattica</a></li>
+                        <li><a id="A2" runat="server" href="~/Corsi.aspx">Corsi</a></li>
+                    </ul>
+                </nav>
+               <div class="copyright">
+                   <table style="max-width:500px">
+                       <tr>
+                           <td style="text-align: right; margin:2px; padding:2px 14px 2px 2px">
+                            <span class="site-title"><%: Page.Title %></span><br /><br />
+                           </td>
+                           <td style="text-align: left; width:280px; padding:2px 2px 4px 2px; margin:2px">
+                                Agenzia di promozione spettacolo e cultura<br />
+                                di Cavalli Federica Regina<br />
+                                <br /><br /><a href="mailto:comeunfiordiloto@gmail.com">comeunfiordiloto@gmail.com</a><br />
+                           </td>
+                       </tr>
+                   </table>
+               </div>
+            </div>
+    </header>
+    <div id="body">
+        <asp:ContentPlaceHolder runat="server" ID="FeaturedContent" />
+        <section class="content-wrapper main-content clear-fix">
+            <asp:ContentPlaceHolder runat="server" ID="MainContent" />
+        </section>
+    </div>
+    <footer>
+        <div class="content-wrapper">
+            <div class="float-left">
+                <p>
+                    <a class="float-left" href="Riservata/Main.aspx"><img src="Images/Picture.png" style="height: 14px" /></a>&copy; <%: DateTime.Now.Year %> - Come un fior di loto di Federica Cavalli<br />
+                    Via Damiano Chiesa, 31&nbsp; 24043 Caravaggio (BG) - Telefono: 340 7280347 - Partita IVA: 03812550162 - Codice Fiscale: CVLFRC71P63L400W
+                 </p>
+                <p style="color:white">Community</p>
+                <p>
+                            <a href="https://www.facebook.com/comeunfiordiloto.caravaggio"><img src="Images/Facebook.png" /></a>
+                            <a href="https://plus.google.com/u/0/106732557729163015499/posts"><img src="Images/Googleplus.png" /></a>
+                            <a href="https://www.youtube.com/channel/UChPJDXm3dnp-vTq_R19ayyw/videos"><img src="Images/Youtube.png" /></a>
+                            <a href="http://comeunfiordiloto.blogspot.it/"><img src="Images/Blogger.png" /></a>
+                        &nbsp;&nbsp;&nbsp;&nbsp;- Powered by <a href="http://www.cr-consult.eu" ><em>Almish</em><span style="color:#FF0000" lang="it">&amp;</span><em>Cesàre</em><span style="color:#FF0000">W</span><em>eb</em></a>
+                           </p>
+<br /><br /><br />
+            </div>
+        </div>
+    </footer>
+    </form>
+</body>
+</html>

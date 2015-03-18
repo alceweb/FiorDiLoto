@@ -1,0 +1,92 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Riservata.master.cs" Inherits="Riservata_Riservata" %>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <title><%: Page.Title %> - Applicazione ASP.NET</title>
+    <link href="~/Content/Site.css" rel="stylesheet" />
+    <link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <asp:PlaceHolder ID="PlaceHolder1" runat="server">           
+        <script src="<%: ResolveUrl("~/Scripts/modernizr-2.6.2.js") %>"></script>
+    </asp:PlaceHolder>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width" />
+    <asp:ContentPlaceHolder runat="server" ID="HeadContent" />
+    <style type="text/css">
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <header style="display:block">
+            <div class="float-left" >
+                     <img style="float:left; height: 150px" alt="" src="../Images/fdloto.png" /><span class="site-title"><%: Page.Title %></span><br />
+                <a id="A1" runat="server" href="~/"><img src="../Images/sito.png"  /></a>
+            </div>
+        <div class="float-left" >
+         </div>
+        <div class="float-right">
+            <section id="login">
+                <asp:LoginView runat="server" ViewStateMode="Disabled">
+                    <AnonymousTemplate>
+                        <ul>
+                            <li><a id="registerLink" runat="server" href="~/Account/Register">Esegui registrazione</a></li>
+                            <li><a id="loginLink" runat="server" href="~/Account/Login">Accedi</a></li>
+                        </ul>
+                    </AnonymousTemplate>
+                    <LoggedInTemplate>
+                        <p>
+                            Hello, <a runat="server" class="username" href="~/Account/Manage" title="Manage your account">
+                                <asp:LoginName runat="server" CssClass="username" />
+                            </a>!
+                                <asp:LoginStatus runat="server" LogoutAction="Redirect" LogoutText="Disconnetti" LogoutPageUrl="~/" />
+                        </p>
+                    </LoggedInTemplate>
+                </asp:LoginView>
+            </section>
+            <nav>
+                <ul class="menum">
+                    <li>Spettacoli</li>
+                    <li><a id="A2" runat="server" href="AggiungiSpettacolo.aspx"><img src="../Images/aggiungi.png" />Add.</a></li>
+                    <li><a id="A3" runat="server" href="ModificaSpettacolo.aspx"><img src="../Images/mod.png" />Mod.</a></li>
+                    <li><a id="A4" runat="server" href="ModificaSpettacoloImg.aspx"><img src="../Images/Imm.png" />Img.</a></li>
+                </ul>
+                <br /><br />
+                <ul class="menum">
+                    <li>Cartelloni</li>
+                    <li><a id="A5" runat="server" href="AggiungiCartellone.aspx"><img src="../Images/aggiungi.png" />Add.</a></li>
+                    <li><a id="A6" runat="server" href="ModificaCartellone.aspx"><img src="../Images/mod.png" />Mod.</a></li>
+                    <li><a id="A7" runat="server" href="ModificaCartelloneImg.aspx"><img src="../Images/Imm.png" />Img.</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <asp:ScriptManager ID="ScriptManager1" runat="server">
+        <Scripts>
+            <asp:ScriptReference Name="jquery" />
+            <asp:ScriptReference Name="jquery.ui.combined" />
+        </Scripts>
+    </asp:ScriptManager>
+     <div id="body">
+        <asp:ContentPlaceHolder runat="server" ID="FeaturedContent" />
+            <asp:ContentPlaceHolder runat="server" ID="MainContent" />
+
+        <section class="content-wrapper main-content clear-fix">
+
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </section>
+    </div>
+    </form>
+    <footer>
+        <div class="content-wrapper">
+            <div class="float-left">
+                <p>
+                    <a class="float-left" href="Riservata/Main.aspx"><img src="Images/Picture.png" style="height: 14px" /></a>&copy; <%: DateTime.Now.Year %> - Come un fior di loto di Federica Cavalli - Powered by <a href="http://www.cr-consult.eu" ><em>Almish</em><span style="color:#FF0000" lang="it">&amp;</span><em>Cesàre</em><span style="color:#FF0000">W</span><em>eb</em></a>
+                </p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
