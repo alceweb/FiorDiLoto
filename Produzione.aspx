@@ -108,8 +108,11 @@
                         <td id="Td2" runat="server" style="">
                             <asp:Image ID="Image1" runat="server" src='<%# "ImgSpett/" + Eval("Id") + "_.jpg"%>'/>
                             <h2><asp:Label ID="TitoloLabel" runat="server" Text='<%# Eval("Titolo") %>' /></h2>
-                            <span class="float-right">
-                                <a href="Galleria.aspx?Id=<%# Eval("Id") %>">Galleria<br /><asp:Image ID="Image2" CssClass="fadeimg" runat="server" src='<%# "ImgSpett/" + Eval("Id") + ".jpg"%>' AlternateText="Galleria" /></a></span>
+                                        <div class="GallIco" >
+                                            <a href="Galleria.aspx?Id=<%# Eval("Id") %>">
+                                                <asp:Label ID="lblFadeImg" runat="server" Text="Galleria"></asp:Label><br /><asp:Image ID="Image2" CssClass="fadeimg" runat="server" src='<%# "ImgSpett/" + Eval("Id") + ".jpg"%>' AlternateText="Galleria" /></a>
+
+                                        </div>
                             <h3>
                                 <em>
                                     <asp:Label ID="DescrizioneBreveLabel" runat="server" Text='<%# Eval("DescrizioneBreve") %>' /></em>

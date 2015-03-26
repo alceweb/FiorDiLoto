@@ -4,11 +4,11 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using System.IO;
 
-public partial class Spettacolo : System.Web.UI.Page
+public partial class IscrizioneNl : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
+
     }
 }

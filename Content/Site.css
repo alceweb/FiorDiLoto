@@ -120,6 +120,55 @@ h6 {
     font-style: italic;
     font-weight: bold;
 }
+/*Form newsletter*/
+.divnl {
+    text-shadow: 0px 0px 3px #fff;
+    text-align: center;
+    background-color: #fff;
+}
+    .divnl h3 {
+        color:#000;
+    }
+    .divnl p {
+        color:#000;
+        padding:10px;
+    }
+.buttonnl {
+    border-radius: 10px;
+    color: #FFFFFF;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #5CB85C;
+}
+.buttonCredits {
+    background: #000000;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    display: inline-block;
+    font-family: sans-serif;
+    box-shadow: none;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    color: #FFFFFF;
+    transition:all 1s ease;
+}
+    .buttonCredits:hover {
+    transition:all 1s ease;
+    transform: scale(1.3);
+    -ms-transform: scale(1.3);
+    -webkit-transform: scale(1.3);
+    }
+.divnl a {
+    color:#68615d;
+}
+.divnl img {
+    width:100%;
+}
+.txtnl {
+    border-radius: 8px;
+    font-size: 0.8em;
+}
 
 /* main layout
 ----------------------------------------------------------*/
@@ -880,5 +929,29 @@ tr.pager td {
     border-width: thin;
     border-color: #E6D5FF;
 }
+.GallIco {
+    float:right;
+    text-align:right;
+    margin:15px;
+}
+.credits {
+    display:table;
+    float: left;
+    color: #fff;
+    transition: all 0.5s ease;
+    padding: 15px 15px 0px 15px;
+}
+    .credits a {
+        transition:all 0.5s ease;
+    }
+    .credits a img {
+        transition:all 0.5s ease;
+    }
+    .credits a:hover img {
+        transition:all 0.5s ease;
+        -ms-transform: scale(1.3); /* IE 9 */
+         -webkit-transform: scale(1.3); /* Safari */
+         transform: scale(1.3);
+    }
 
 

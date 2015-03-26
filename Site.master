@@ -89,20 +89,34 @@
     </div>
     <footer>
         <div class="content-wrapper">
-            <div class="float-left">
-                <p>
-                    <a class="float-left" href="Riservata/Main.aspx"><img src="Images/Picture.png" style="height: 14px" /></a>&copy; <%: DateTime.Now.Year %> - Come un fior di loto di Federica Cavalli<br />
-                    Via Damiano Chiesa, 31&nbsp; 24043 Caravaggio (BG) - Telefono: 340 7280347 - Partita IVA: 03812550162 - Codice Fiscale: CVLFRC71P63L400W
-                 </p>
-                <p style="color:white">Community</p>
-                <p>
-                            <a href="https://www.facebook.com/comeunfiordiloto.caravaggio"><img src="Images/Facebook.png" /></a>
-                            <a href="https://plus.google.com/u/0/106732557729163015499/posts"><img src="Images/Googleplus.png" /></a>
-                            <a href="https://www.youtube.com/channel/UChPJDXm3dnp-vTq_R19ayyw/videos"><img src="Images/Youtube.png" /></a>
-                            <a href="http://comeunfiordiloto.blogspot.it/"><img src="Images/Blogger.png" /></a>
-                        &nbsp;&nbsp;&nbsp;&nbsp;- Powered by <a href="http://www.cr-consult.eu" ><em>Almish</em><span style="color:#FF0000" lang="it">&amp;</span><em>Cesàre</em><span style="color:#FF0000">W</span><em>eb</em></a>
-                           </p>
-<br /><br /><br />
+            <div class="credits">
+                <span> <a class="float-left" href="Riservata/Main.aspx"><img src="Images/Picture.png" style="height: 14px" /></a>&copy; <%: DateTime.Now.Year %> - Come un fior di loto di Federica Cavalli</span><br /><br />
+                - Telefono: 340 7280347<br /> - Partita IVA: 03812550162<br />
+                 - Codice Fiscale: CVLFRC71P63L400W<br /><br /><br />
+                    <span >Powered by <a href="http://www.cr-consult.eu"><em>Almish</em><span style="color: #FF0000" lang="it">&amp;</span><em>Cesàre</em><span style="color: #FF0000">W</span><em>eb</em></a></span>
+
+            </div>
+                <div class="credits">
+                    <span>Community</span><br /><br />
+                    <a href="https://www.facebook.com/comeunfiordiloto.caravaggio">
+                        <img src="Images/Facebook.png" /></a><br /><br />
+                    <a href="https://plus.google.com/u/0/106732557729163015499/posts">
+                        <img src="Images/Googleplus.png" /></a><br /><br />
+                    <a href="https://www.youtube.com/channel/UChPJDXm3dnp-vTq_R19ayyw/videos">
+                        <img src="Images/Youtube.png" /></a>
+                </div>
+                <div class="credits">
+                    <a href="IscrizioneNl.aspx" ><img height="100"  src="Images/newsletter.png" /></a>
+                </div>
+            <div class="credits">
+                <span>Credits</span><br /><br />
+           <button onclick="window.open('http://fiordiloto.azurewebsites.net/Credits.aspx?id=1','_blank','scrollbars=1,resizable=1,toolbar=0,width=400,height=500','top=100,left=600')" class="buttonCredits" >Federica Cavalli</button><br /><br />
+           <button onclick="window.open('http://fiordiloto.azurewebsites.net/Bottelli.html','_blank','scrollbars=1,resizable=1,toolbar=0,width=400,height=500','top=100,left=600')" class="buttonCredits">Alessandro Bottelli</button>
+            </div>
+            <div class="credits">
+                <span>Archivio</span><br /><br />
+                <a href="#nogo"><img src="Images/archivio.gif" height="80" /></a>
+
             </div>
         </div>
     </footer>
