@@ -111,11 +111,11 @@
             <div class="credits">
                 <span>Credits</span><br /><br />
            <button onclick="window.open('http://fiordiloto.azurewebsites.net/Credits.aspx?id=1','_blank','scrollbars=1,resizable=1,toolbar=0,width=400,height=500','top=100,left=600')" class="buttonCredits" >Federica Cavalli</button><br /><br />
-           <button onclick="window.open('http://fiordiloto.azurewebsites.net/Bottelli.html','_blank','scrollbars=1,resizable=1,toolbar=0,width=400,height=500','top=100,left=600')" class="buttonCredits">Alessandro Bottelli</button>
+           <button onclick="window.open('http://fiordiloto.azurewebsites.net/Credits.aspx?id=2','_blank','scrollbars=1,resizable=1,toolbar=0,width=400,height=500','top=100,left=600')" class="buttonCredits">Alessandro Bottelli</button>
             </div>
             <div class="credits">
                 <span>Archivio</span><br /><br />
-                <a href="#nogo"><img src="Images/archivio.gif" height="80" /></a>
+                <a href="Archivio.aspx"><img src="Images/archivio.gif" height="80" /></a>
 
             </div>
         </div>

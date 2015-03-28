@@ -1,7 +1,6 @@
-﻿<%@ Page Title="Test" Language="C#" MasterPageFile="~/Site.master" AutoEventWireup="true" CodeFile="test.aspx.cs" Inherits="test" %>
+﻿<%@ Page Title="Archivio" Language="C#" MasterPageFile="~/Site.master" AutoEventWireup="true" CodeFile="Archivio.aspx.cs" Inherits="Archivio" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" Runat="Server">
-    <link href="colorbox-master/example3/colorbox.css" rel="stylesheet" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="FeaturedContent" Runat="Server">
 </asp:Content>
@@ -9,6 +8,9 @@
     <table class="tblArchivio">
         <tr>
             <td class="ElArchivio">
+                <div class="TitoloVetrina">
+                    Archivio
+                </div>
                 <asp:ListView ID="ListView2" runat="server" DataKeyNames="AnnoArchivio" SelectedIndex="-1" DataSourceID="SqlDataSource2">
                     <EmptyDataTemplate>
                         <span>Non è stato restituito alcun dato.</span>
@@ -91,13 +93,13 @@
 
                                     </td>
                                     <td>
-                                        <asp:Label ID="TitoloLabel" runat="server" Text='<%# Eval("Titolo") %>' />
+                                        <asp:Label ID="TitoloLabel" CssClass="verde" runat="server" Text='<%# Eval("Titolo") %>' />
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>
                                         <asp:Label ID="DescrizioneLabel" runat="server" Text='<%# Eval("DescrizioneBreve") %>' /><br /><br />
-                                        <a href="<%# "Spettacolo.aspx?id=" + Eval("id") %>">Scheda spettacolo</a>
+                                        <a href="<%# "Spettacolo.aspx?id=" + Eval("id") %>">Scheda</a>
                                     </td>
                                     <td>
 
@@ -117,6 +119,5 @@
             </td>
         </tr>
     </table>
-
 </asp:Content>
 

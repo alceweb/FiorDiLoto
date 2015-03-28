@@ -83,7 +83,7 @@
                             <asp:TextBox ID="DescrizioneBreveTextBox" runat="server" Text='<%# Bind("DescrizioneBreve") %>' Width="100%" />
                             <br />
                             Regia:
-	               <CKEditor:CKEditorControl ID="CKEditorControl2" Width="100%" Text='<%# Bind("Regia") %>' BasePath="~/ckeditor" runat="server" UIColor="Gray" Language="it" EnterMode="BR"></CKEditor:CKEditorControl>
+	                        <CKEditor:CKEditorControl ID="CKEditorControl2" Width="100%" Text='<%# Bind("Regia") %>' BasePath="~/ckeditor" runat="server" UIColor="Gray" Language="it" EnterMode="BR"></CKEditor:CKEditorControl>
                             <br />
                             Data:
                             <asp:TextBox ID="DataTextBox" runat="server" Text='<%# Bind("Data") %>' Width="100%" />
@@ -93,8 +93,8 @@
                             <br />
                              <br />
                             Descrizione:
-	               <CKEditor:CKEditorControl ID="CKEditor1" Width="100%" Text='<%# Bind("Descrizione") %>' BasePath="~/ckeditor" runat="server" UIColor="Gray" Language="it" EnterMode="BR"></CKEditor:CKEditorControl>
-                           <table style="text-align: center">
+	                        <CKEditor:CKEditorControl ID="CKEditor1" Width="100%" Text='<%# Bind("Descrizione") %>' BasePath="~/ckeditor" runat="server" UIColor="Gray" Language="it" EnterMode="BR"></CKEditor:CKEditorControl>
+                            <table style="text-align: center">
                                 <tr>
                                     <td>
                                         <asp:CheckBox ID="VenditaCheckBox" runat="server" Checked='<%# Bind("Vendita") %>' Enabled="true" Text="Vendita" />
@@ -115,6 +115,7 @@
                                     <td></td>
                                 </tr>
                             </table>
+                            <asp:Label ID="Label1" runat="server" Text="Anno Archivio"></asp:Label>:<asp:TextBox ID="TextBox1" placeholder="Anno Numerico" Text='<%# Bind("AnnoArchivio") %>' runat="server"></asp:TextBox>
                             <hr />
                             <asp:LinkButton ID="UpDateButton" runat="server" CommandName="Update" Text="Aggiorna"/>
                             <asp:LinkButton ID="CancelButton" runat="server" CommandName="Cancel" Text="Annulla"/>
@@ -178,6 +179,8 @@
                                     <td></td>
                                 </tr>
                             </table>
+                            Anno archivio:
+                            <asp:Label ID="lblAnnoArchivio" CssClass="label" runat="server" Text='<%# Eval("AnnoArchivio") %>'></asp:Label>
                             <hr />
                             <asp:LinkButton ID="EditButton" runat="server" CommandName="Edit" Text="Modifica" />
                         </td>
@@ -202,7 +205,7 @@
                     SelectCommand="SELECT * FROM [Spettacoli] WHERE ([Id] = @Id)" 
                     DeleteCommand="DELETE FROM [Spettacoli] WHERE [Id] = @Id" 
                     InsertCommand="INSERT INTO [Spettacoli] ([Titolo], [DescrizioneBreve], [Descrizione], [Regia], [Vendita], [Corso], [Evidenza], [Data], [ProgDid], [Partecipazioni]) VALUES (@Titolo, @DescrizioneBreve, @Descrizione, @Regia, @Vendita, @Corso, @Evidenza, @Data, @ProgDid, @Partecipazioni)" 
-                    UpdateCommand="UPDATE [Spettacoli] SET [Titolo] = @Titolo, [DescrizioneBreve] = @DescrizioneBreve, [Descrizione] = @Descrizione, [Regia] = @Regia, [Vendita] = @Vendita, [Corso] = @Corso, [Evidenza] = @Evidenza, [Data] = @Data, [ProgDid] = @ProgDid, [Partecipazioni] = @Partecipazioni WHERE [Id] = @Id">
+                    UpdateCommand="UPDATE [Spettacoli] SET [Titolo] = @Titolo, [DescrizioneBreve] = @DescrizioneBreve, [Descrizione] = @Descrizione, [Regia] = @Regia, [Vendita] = @Vendita, [Corso] = @Corso, [Evidenza] = @Evidenza, [Data] = @Data, [ProgDid] = @ProgDid, [Partecipazioni] = @Partecipazioni, [AnnoArchivio] = @AnnoArchivio WHERE [Id] = @Id">
                     <DeleteParameters>
                         <asp:Parameter Name="Id" Type="Int32" />
                     </DeleteParameters>
@@ -233,6 +236,7 @@
                         <asp:Parameter Name="ProgDid" Type="Boolean" />
                         <asp:Parameter Name="Partecipazioni" Type="String" />
                         <asp:Parameter Name="Id" Type="Int32" />
+                        <asp:Parameter Name="AnnoArchivio" Type="Int16" />
                     </UpdateParameters>
                 </asp:SqlDataSource>
 

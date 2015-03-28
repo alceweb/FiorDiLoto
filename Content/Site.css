@@ -120,6 +120,31 @@ h6 {
     font-style: italic;
     font-weight: bold;
 }
+/* archivio*/
+.tblArchivio {
+    width:auto;
+}
+.ElArchivio {
+    color: #000;
+    text-transform: uppercase;
+    font-size: 2.3em;
+    Text-shadow: 0px 0px 5px  #fff;
+    font-weight: bold;
+}
+.Archivio {
+    min-height:60px;
+    padding:0px;
+}
+    .Archivio img {
+    box-shadow: 0px 0px 5px 5px #666;
+    border: thin solid #FFFFFF;
+    opacity: 1;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+    }
 /*Form newsletter*/
 .divnl {
     text-shadow: 0px 0px 3px #fff;
@@ -349,13 +374,15 @@ ul#menu {
 /* menu modifica
 ----------------------------------------------------------*/
 ul.menum {
-    margin: 0 25px 5px 5px;
+    margin: 0 15px 5px 5px;
     padding: 0;
     text-align: right;
     font-size:1.2em;
-    height:25px
+    height:30px
 }
-
+ul.menum img {
+    height:18px;
+}
     ul.menum li {
     display: inline;
     list-style: none;

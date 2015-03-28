@@ -57,7 +57,7 @@
                     </SelectedItemTemplate>
                 </asp:ListView>
                 <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" 
-                    SelectCommand="SELECT * FROM [Spettacoli] WHERE ([Corso] = @Corso)">
+                    SelectCommand="SELECT * FROM [Spettacoli] WHERE (([Corso] = @Corso) and [AnnoArchivio] = 0)">
                     <SelectParameters>
                         <asp:Parameter DefaultValue="True" Name="Corso" Type="Boolean" />
                     </SelectParameters>
