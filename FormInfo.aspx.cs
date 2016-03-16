@@ -16,7 +16,7 @@ public partial class FormInfo : System.Web.UI.Page
     {
         //INVIO LA MAIL
         ////Preparo i campi della mail
-        String from = "postmaster@comeunfiordiloto.it";
+        String from = "webservice@comeunfiordiloto.it";
         String to = "comeunfiordiloto@gmail.com";
         //Istanzio la classe che rappresenta il messaggio 
         MailMessage mMailMessage = new MailMessage();

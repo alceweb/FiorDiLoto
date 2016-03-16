@@ -1,122 +1,40 @@
 ﻿<%@ Page Title="Test" Language="C#" MasterPageFile="~/Site.master" AutoEventWireup="true" CodeFile="test.aspx.cs" Inherits="test" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" Runat="Server">
+    <style type="text/css">
+
+    </style>
     <link href="colorbox-master/example3/colorbox.css" rel="stylesheet" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="FeaturedContent" Runat="Server">
+        <asp:Panel ID="PnlCookie" runat="server">
+            <div class="divCook">
+               <span>
+                Questo sito utilizza cookie di profilazione, propri o di altri.<br />
+                Se accedi a un qualunque elemento del sito acconsenti all'uso del cookie.<br />
+                 Se vuoi saperne di più o negare il consenso a tutti o alcuni cookie clicca <a href="CookiesInfo.aspx" runat="server" id="Cookies">qui</a>.
+               </span><br /><br />
+                <div style="text-align:center">
+                <asp:LinkButton ID="CookieButton" runat="server" OnClick="CookieButton_Click" Text="Acconsenti"></asp:LinkButton>
+
+                </div>
+            </div>
+
+        </asp:Panel>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="MainContent" Runat="Server">
-    <table class="tblArchivio">
-        <tr>
-            <td class="ElArchivio">
-                <asp:ListView ID="ListView2" runat="server" DataKeyNames="AnnoArchivio" SelectedIndex="-1" DataSourceID="SqlDataSource2">
-                    <EmptyDataTemplate>
-                        <span>Non è stato restituito alcun dato.</span>
-                    </EmptyDataTemplate>
-                    <ItemTemplate>
-                        <asp:LinkButton ID="LinkButton1" Text='<%# Eval("AnnoArchivio") %>' CommandName="Select" runat="server"></asp:LinkButton>
-                        <br />
-                        <br />
-                        </span>
-                    </ItemTemplate>
-                    <LayoutTemplate>
-                        <div id="itemPlaceholderContainer" runat="server">
-                            <span runat="server" id="itemPlaceholder" />
-                        </div>
-                        <div style="">
-                        </div>
-                    </LayoutTemplate>
-                    <SelectedItemTemplate>
-                        <span style="">
-                            <asp:Label ID="AnnoArchivioLabel" runat="server" Text='<%# Eval("AnnoArchivio") %>' />
-                            <br />
-                            <br />
-                        </span>
-                    </SelectedItemTemplate>
-                </asp:ListView>
-                <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="SELECT DISTINCT [AnnoArchivio] FROM [Spettacoli] WHERE [AnnoArchivio] > 0 ORDER BY [AnnoArchivio]"></asp:SqlDataSource>
-            </td>
-            <td class="Archivio">
-                <asp:ListView ID="ListView1" DataKeyNames="Id" runat="server" DataSourceID="SqlDataSource1">
-                    <ItemTemplate>
-                        <li class="blockfade">
-                            <table>
-                                <tr>
-                                    <td >
-                                        <asp:ImageButton CssClass="fadeimg" ID="ImageButton1" CommandName="Select" ImageUrl='<%# "~/ImgSpett/" + Eval("Id") + ".jpg"%>' runat="server" />
-                                    </td>
-                                    <td >
-                                        <asp:Label CssClass="verde" ID="TitoloLabel" runat="server" Text='<%# Eval("Titolo") %>' />
-                                    </td>
-                                </tr>
-                            </table>
-                        </li>
-                    </ItemTemplate>
-                    <EmptyDataTemplate>
-                            <img style="width: 100%" src="Images/<%: Page.Title %>.jpg" />
-                                        <br />
-                                    <h3 >
-                                    Un’urgenza diventa “idea”<br />
-                                    Un’idea diventa “embrione di bellezza”<br />
-                                    Il tempo di attesa che trascorre <br />
-                                    tra quel nuovo inizio e il palcoscenico <br />
-                                    è un vortice di domande, osservazioni, pensieri<br />
-                                    di prove, di faccio e rifaccio<br />
-                                    di luce e ombre<br />
-                                        di stallo e picchi di vivacità artistica<br />
-                                         è l’“otium” dei latini<br />
-                                        contatti, ricerca, attesa<br />
-                                         poesia, studio, musica, arte<br /> 
-                                    è curiosità che alimenta curiosità<br />
-                                    è inizio che alimenta nuovi inizi…<br />
-                                    </h3>
-                                        <h2 class="verde" style="text-align:right">
-                                    …questo è il nostro essere
-
-                                    </h2>
-                    </EmptyDataTemplate>
-                    <ItemSeparatorTemplate>
-                    </ItemSeparatorTemplate>
-                    <LayoutTemplate>
-                        <ul id="itemPlaceholderContainer" runat="server" style="list-style-type: none">
-                            <li runat="server" id="itemPlaceholder" />
-                        </ul>
-                    </LayoutTemplate>
-                    <SelectedItemTemplate>
-                        <li >
-                            <table>
-                                <tr>
-                                    <td rowspan="2">
-                                        <img class="selectedfade" src='<%# "ImgSpett/" + Eval("Id") + ".jpg"%>' />
-
-                                    </td>
-                                    <td>
-                                        <asp:Label ID="TitoloLabel" runat="server" Text='<%# Eval("Titolo") %>' />
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <asp:Label ID="DescrizioneLabel" runat="server" Text='<%# Eval("DescrizioneBreve") %>' /><br /><br />
-                                        <a href="<%# "Spettacolo.aspx?id=" + Eval("id") %>">Scheda spettacolo</a>
-                                    </td>
-                                    <td>
-
-                                    </td>
-                                </tr>
-                            </table>
-                            <hr />
-                        </li>
-                    </SelectedItemTemplate>
-                </asp:ListView>
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="SELECT * FROM [Spettacoli] WHERE ([AnnoArchivio] = @AnnoArchivio) ORDER BY [Titolo]">
-        <SelectParameters>
-            <asp:ControlParameter ControlID="ListView2" Name="AnnoArchivio" PropertyName="SelectedValue" Type="Int32" />
-        </SelectParameters>
-    </asp:SqlDataSource>
-
-            </td>
-        </tr>
-    </table>
-
+    <h2>Pagina di test cookieTest</h2>
+    <p>
+        Ciao Federica<br />
+        Questa è la pagina di test per il plug-in della legge sulla gestione dei cookies
+    </p>
+    <p>Ho cercato di farla il meno invasiva possibile... :-)<br />
+        Questo rettangolo che è appena passato dal video resterà attivo ogni volta che si entra nella pagina fino a che l'utente non cliccherà su pulsante <strong><em>Acconsenti</em></strong><br />
+        Naturalmente per permetterti di visualizzare più volte l'animazione in questa pagina test ilplug-in non viene mai disattivato.<br />
+        Dagli un'occhiata e fammi sapere se va bene. Sii pure spietata nel giudizio grafico.
+    </p>
+    <p>
+        Ciao!!!!
+    </p>
 </asp:Content>
 

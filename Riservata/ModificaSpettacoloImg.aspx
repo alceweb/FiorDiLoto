@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Riservata/Riservata.master" AutoEventWireup="true" CodeFile="ModificaSpettacoloImg.aspx.cs" Inherits="Riservata_ModificaSpettacoloImg" %>
+﻿<%@ Page Title="Gestione spettacoli" Language="C#" MasterPageFile="~/Riservata/Riservata.master" AutoEventWireup="true" CodeFile="ModificaSpettacoloImg.aspx.cs" Inherits="Riservata_ModificaSpettacoloImg" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" Runat="Server">
 </asp:Content>

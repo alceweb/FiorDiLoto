@@ -82,6 +82,20 @@
             </div>
     </header>
     <div id="body">
+        <asp:Panel ID="PnlCookie" runat="server">
+            <div class="divCook">
+               <span>
+                Questo sito utilizza cookie di profilazione, propri o di altri.<br />
+                Se accedi a un qualunque elemento del sito acconsenti all'uso del cookie.<br />
+                 Se vuoi saperne di più o negare il consenso a tutti o alcuni cookie clicca <a href="CookiesInfo.aspx" runat="server" id="Cookies">qui</a>.
+               </span><br /><br />
+                <div style="text-align:center">
+                <asp:LinkButton ID="CookieButton" runat="server" OnClick="CookieButton_Click" Text="Acconsenti"></asp:LinkButton>
+
+                </div>
+            </div>
+
+        </asp:Panel>
         <asp:ContentPlaceHolder runat="server" ID="FeaturedContent" />
         <section class="content-wrapper main-content clear-fix">
             <asp:ContentPlaceHolder runat="server" ID="MainContent" />
@@ -99,9 +113,9 @@
                 <div class="credits">
                     <span>Community</span><br /><br />
                     <a href="https://www.facebook.com/comeunfiordiloto.caravaggio">
-                        <img src="Images/Facebook.png" /></a><br /><br />
+                        <img src="Images/Facebook.png" /></a><br />
                     <a href="https://plus.google.com/u/0/106732557729163015499/posts">
-                        <img src="Images/Googleplus.png" /></a><br /><br />
+                        <img src="Images/Googleplus.png" /></a><br />
                     <a href="https://www.youtube.com/channel/UChPJDXm3dnp-vTq_R19ayyw/videos">
                         <img src="Images/Youtube.png" /></a>
                 </div>
@@ -110,8 +124,8 @@
                 </div>
             <div class="credits">
                 <span>Credits</span><br /><br />
-           <button onclick="window.open('http://fiordiloto.azurewebsites.net/Credits.aspx?id=1','_blank','scrollbars=1,resizable=1,toolbar=0,width=400,height=500','top=100,left=600')" class="buttonCredits" >Federica Cavalli</button><br /><br />
-           <button onclick="window.open('http://fiordiloto.azurewebsites.net/Credits.aspx?id=2','_blank','scrollbars=1,resizable=1,toolbar=0,width=400,height=500','top=100,left=600')" class="buttonCredits">Alessandro Bottelli</button>
+           <button onclick="window.open('http://comeunfiordiloto.it/Credits.aspx?id=1','_blank','scrollbars=1,resizable=1,toolbar=0,width=400,height=500','top=100,left=600')" class="buttonCredits" >Federica Cavalli</button><br /><br />
+           <button onclick="window.open('http://comeunfiordiloto.it/Credits.aspx?id=2','_blank','scrollbars=1,resizable=1,toolbar=0,width=400,height=500','top=100,left=600')" class="buttonCredits">Alessandro Bottelli</button>
             </div>
             <div class="credits">
                 <span>Archivio</span><br /><br />

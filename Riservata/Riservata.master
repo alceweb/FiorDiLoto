@@ -21,12 +21,9 @@
     <form id="form1" runat="server">
     <header style="display:block; height:190px">
             <div class="float-left" >
-                     <img style="float:left; height: 150px" alt="" src="../Images/fdloto.png" /><span class="site-title"><%: Page.Title %></span><br />
-                <a id="A1" runat="server" href="~/"><img src="../Images/sito.png"  /></a>
+                     <img style="float:left; height: 150px" alt="" src="../Images/fdloto.png" />
             </div>
         <div class="float-left" >
-         </div>
-        <div class="float-right">
             <section id="login">
                 <asp:LoginView runat="server" ViewStateMode="Disabled">
                     <AnonymousTemplate>
@@ -45,7 +42,11 @@
                     </LoggedInTemplate>
                 </asp:LoginView>
             </section>
-            <nav>
+                <span class="site-title"><%: Page.Title %></span><br /><br />
+                <a id="A1" runat="server" href="~/"><img src="../Images/sito.png"  /></a>
+         </div>
+        <div class="float-right">
+            <br /><nav>
                 <ul class="menum">
                     <li>Spettacoli</li>
                     <li><a id="A2" runat="server" href="AggiungiSpettacolo.aspx"><img src="../Images/aggiungi.png" />Add.</a></li>
@@ -57,11 +58,15 @@
                     <li><a id="A5" runat="server" href="AggiungiCartellone.aspx"><img src="../Images/aggiungi.png" />Add.</a></li>
                     <li><a id="A6" runat="server" href="ModificaCartellone.aspx"><img src="../Images/mod.png" />Mod.</a></li>
                     <li><a id="A7" runat="server" href="ModificaCartelloneImg.aspx"><img src="../Images/Imm.png" />Img.</a></li>
-                </ul><br /><hr />
+                </ul><hr />
                 <ul class="menum">
                     <li>Credits</li>
                     <li><a id="A8" runat="server" href="ModificaCredits.aspx?id=1"><img src="../Images/mod.png" />Federica</a></li>
                     <li><a id="A9" runat="server" href="ModificaCredits.aspx?id=2"><img src="../Images/mod.png" />Alessandro</a></li>
+                </ul><br />
+                <ul class="menum">
+                    <li>Newsletter</li>
+                    <li><a href="NewsLetterAdd.aspx"><img src="../Images/aggiungi.png" />Add.</a></li>
                 </ul>
             </nav>
         </div>

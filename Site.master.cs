@@ -65,6 +65,18 @@ public partial class SiteMaster : MasterPage
 
     protected void Page_Load(object sender, EventArgs e)
     {
-
+        if (Request.Cookies["fiordiloto"] != null)
+        {
+            PnlCookie.Visible = false;
+        }
+    }
+    protected void CookieButton_Click(object sender, EventArgs e)
+    {
+        HttpCookie myCookie = new HttpCookie("fiordiloto");
+        myCookie["Accettato"] = "Cookies accettati";
+        myCookie["Data"] = DateTime.Now.ToString();
+        myCookie.Expires = DateTime.Now.AddDays(180d);
+        Response.Cookies.Add(myCookie);
+        PnlCookie.Visible = false;
     }
 }

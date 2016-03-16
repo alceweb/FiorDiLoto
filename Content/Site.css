@@ -127,9 +127,15 @@ h6 {
 .ElArchivio {
     color: #000;
     text-transform: uppercase;
-    font-size: 2.3em;
-    Text-shadow: 0px 0px 5px  #fff;
+    font-size:1.5em;
+    Text-shadow: 0px 0px 5px #fff;
     font-weight: bold;
+    text-decoration: none;
+}
+.ElArchivioSel {
+    color: #FFFFFF;
+    text-shadow:0px 0px 5px #76923c;
+    font-size:1.6em;
 }
 .Archivio {
     min-height:60px;
@@ -981,4 +987,36 @@ tr.pager td {
          transform: scale(1.3);
     }
 
+/* sezione Coolies*/
+.divCook {
+    border-width: 0.7px;
+    border-color: rgba(248, 246, 246, 0.84);
+    width: 200px;
+    border-radius: 0px 0px 15px 15px;
+    text-align: justify;
+    background-color: rgba(21, 21, 21, 0.80);
+    text-shadow: 0px 0px 3px #000;
+    padding: 5px;
+    position: absolute;
+    -webkit-animation-name: cook; /* Chrome, Safari, Opera */
+    -webkit-animation-duration: 3s; /* Chrome, Safari, Opera */
+    animation-name: cook;
+    animation-duration: 3s;
+    animation-direction: normal;
+    border-right-style: solid;
+    border-bottom-style: solid;
+    border-left-style: solid;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes cook {
+    0%   {left:50%; top:50%;}
+    100% {left:0px; top:160px;}
+}
+
+/* Standard syntax */
+@keyframes cook {
+    0%   {left:50%; top:50%;}
+    100% {left:0px; top:160px;}
+}    
 

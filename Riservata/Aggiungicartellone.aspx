@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Riservata/Riservata.master" AutoEventWireup="true" CodeFile="Aggiungicartellone.aspx.cs" Inherits="Riservata_Aggiungicartellone" %>
+﻿<%@ Page Title="Gestione cartelloni" Language="C#" MasterPageFile="~/Riservata/Riservata.master" AutoEventWireup="true" CodeFile="Aggiungicartellone.aspx.cs" Inherits="Riservata_Aggiungicartellone" %>
 <%@ Register Assembly="CKEditor.NET" Namespace="CKEditor.NET" TagPrefix="CKEditor" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" Runat="Server">
